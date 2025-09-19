@@ -101,7 +101,7 @@ const Hero = () => {
     <TypeAnimation
       sequence={[
         'Kalani Jayasundara',
-        3000,
+        2000,
         '',
         'Web Developer',
         2000,
