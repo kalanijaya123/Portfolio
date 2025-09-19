@@ -2,10 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 import { FaMicrochip, FaLinkedin, FaGithub, FaReact, FaCss3Alt, FaJsSquare, FaNodeJs } from "react-icons/fa";
 import { SiDotnet, SiPostgresql, SiCplusplus, SiArduino, SiMongodb, SiNestjs, SiTailwindcss, SiPython,SiLaravel, SiMysql } from "react-icons/si";
-import BNR from "../Assets/BNR.jpg";
-import PF from "../Assets/PF.png";
-import ECOM from "../Assets/ECOM.jpg";
-import YTSUM from "../Assets/YTSUM.png";
+
 import HYDRO1 from "../Assets/HYDRO1.jpeg";
 import HYDRO2 from "../Assets/HYDRO2.jpeg";
 import EVE1 from "../Assets/EVE1.png";

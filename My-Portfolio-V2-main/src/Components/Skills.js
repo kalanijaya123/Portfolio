@@ -1,55 +1,30 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-
-import i1 from '../Assets/Skills/i1.png';
-import i2 from '../Assets/Skills/i2.png';
-import i3 from '../Assets/Skills/i3.png';
-import i4 from '../Assets/Skills/i4.png';
-import i5 from '../Assets/Skills/i5.png';
-import i6 from '../Assets/Skills/i6.png';
-import i7 from '../Assets/Skills/i7.png';
-import i8 from '../Assets/Skills/i8.png';
-import i9 from '../Assets/Skills/i9.png';
-import i10 from '../Assets/Skills/i10.png';
-import i13 from '../Assets/Skills/i13.png';
-import i14 from '../Assets/Skills/i14.png';
-import i15 from '../Assets/Skills/i15.png';
-import i16 from '../Assets/Skills/i16.png';
-import i17 from '../Assets/Skills/i17.png';
-import i18 from '../Assets/Skills/i18.png';
-import i19 from '../Assets/Skills/i19.png';
-import i20 from '../Assets/Skills/i20.jpg';
-import i22 from '../Assets/Skills/i22.png';
-import i23 from '../Assets/Skills/i23.png';
-import i24 from '../Assets/Skills/i24.png';
+import { FaReact, FaJsSquare, FaCss3Alt, FaHtml5, FaGithub } from 'react-icons/fa';
+import { SiOpenjdk, SiC, SiCplusplus, SiPython, SiPhp, SiDotnet, SiSpring, SiMysql, SiMongodb, SiPostgresql, SiGit, SiArduino } from 'react-icons/si';
 
 const skillCards = [
   {
     id: 1,
     title: "Frontend",
-    image: [i7, i13, i17, i23, i24],
+    icons: [FaReact, FaHtml5, FaCss3Alt],
   },
   {
     id: 2,
     title: "Backend",
-    image: [i20, i14, i16],
+    icons: [SiPhp, SiDotnet, SiSpring],
   },
   {
     id: 3,
     title: "Programming",
-    image: [i2, i3, i9, i10, i18],
+  icons: [SiOpenjdk, FaJsSquare, SiC, SiCplusplus, SiPython],
   },
   {
     id: 4,
-    title: "Design",
-    image: [i4, i8, i15, i1],
-  },
-  {
-    id: 5,
     title: "Tools & Platforms",
-    image: [i5, i6, i19, i22],
-  }
+  icons: [SiGit, FaGithub, SiArduino, SiMysql, SiMongodb, SiPostgresql],
+  },
 ];
 
 const Skills = () => {
@@ -90,14 +65,46 @@ const Skills = () => {
             </h3>
 
             <div className="flex flex-wrap gap-3 justify-center mb-5">
-              {card.image.map((imgSrc, index) => (
-                <img
-                  key={index}
-                  src={imgSrc}
-                  alt={`tech-${index}`}
-                  className="h-10 w-10 object-contain hover:scale-110 transition-transform"
-                />
-              ))}
+              {card.icons
+                .filter(Boolean)
+                .map((Icon, index) => {
+                  if (typeof Icon !== 'function') return null;
+                  const iconName = Icon.displayName || Icon.name || '';
+                  let color = '#FFFFFF';
+                  let label = iconName.replace(/^Fa|^Si/, '');
+                  switch (iconName) {
+                    case 'FaReact': color = '#61DAFB'; label = 'React'; break;
+                    case 'FaJsSquare': color = '#F7DF1E'; label = 'JavaScript'; break;
+                    case 'FaCss3Alt': color = '#1572B6'; label = 'CSS3'; break;
+                    case 'FaHtml5': color = '#E34F26'; label = 'HTML5'; break;
+                    case 'SiPhp': color = '#777BB4'; label = 'PHP'; break;
+                    case 'SiDotnet': color = '#512BD4'; label = '.NET'; break;
+                    case 'SiSpring': color = '#6DB33F'; label = 'Spring'; break;
+                    case 'SiOpenjdk': color = '#007396'; label = 'Java'; break;
+                    case 'SiC': color = '#A8B9CC'; label = 'C'; break;
+                    case 'SiCplusplus': color = '#00599C'; label = 'C++'; break;
+                    case 'SiPython': color = '#3776AB'; label = 'Python'; break;
+                    case 'SiGit': color = '#F05032'; label = 'Git'; break;
+                    case 'FaGithub': color = '#181717'; label = 'GitHub'; break;
+                    case 'SiArduino': color = '#00979D'; label = 'Arduino'; break;
+                    case 'SiMysql': color = '#4479A1'; label = 'MySQL'; break;
+                    case 'SiMongodb': color = '#47A248'; label = 'MongoDB'; break;
+                    case 'SiPostgresql': color = '#4169E1'; label = 'PostgreSQL'; break;
+                    default: color = '#FFFFFF'; label = iconName;
+                  }
+                  return (
+                    <span key={index} className="relative group">
+                      <Icon
+                        size={40}
+                        className="text-white hover:scale-110 transition-transform duration-300"
+                        style={{ color }}
+                      />
+                      <span className="absolute left-1/2 -translate-x-1/2 -bottom-8 scale-0 group-hover:scale-100 bg-gray-800 text-white text-xs rounded px-2 py-1 transition-transform duration-200 z-10 whitespace-nowrap pointer-events-none">
+                        {label}
+                      </span>
+                    </span>
+                  );
+                })}
             </div>
           </motion.div>
         ))}

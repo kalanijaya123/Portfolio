@@ -40,8 +40,8 @@ const Navbar = () => {
         {/* Desktop → Name | Mobile → Logo */}
         <a href="#home">
           <h1 className="hidden md:block text-2xl font-bold">
-            <span className="text-purple-600">L</span>ahiru{" "}
-            <span className="text-purple-600">I</span>mesh
+            <span className="text-purple-600">K</span>alani{" "}
+            <span className="text-purple-600">J</span>ayasundara
           </h1>
           <img
             src={LOGO}
