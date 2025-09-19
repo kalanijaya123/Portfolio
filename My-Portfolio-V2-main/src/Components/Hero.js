@@ -51,16 +51,19 @@ const Hero = () => {
 export default Hero;
 */
 
+
 import React from "react";
 import GalaxyBackground from "./GalaxyBackground";
 import CV from '../Assets/CV.pdf';
+import profilePic from '../Assets/PP.png';
 import { TypeAnimation } from 'react-type-animation';
 import { Typewriter } from 'react-simple-typewriter';
-import { FaLinkedin, FaFacebook, FaBehance, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaFacebook, FaBehance, FaGithub, FaInstagram } from "react-icons/fa";
 
 const socialLinks = [
   { icon: FaLinkedin, url: 'https://www.linkedin.com/in/kalani-jayasundara/' },
   { icon: FaFacebook, url: 'https://web.facebook.com/kalani.jayasundara.422751/' },
+ { icon: FaInstagram, url: 'https://www.instagram.com/_kalani__jayasundara_/' },
 
   { icon: FaGithub, url: 'https://github.com/kalanijaya123' },
 ];
@@ -93,8 +96,19 @@ const Hero = () => {
 </div>
 
 
-      {/* Main Content */}
-      <div className="text-center relative z-10 max-w-4xl">
+      {/* Main Content with Profile Image */}
+      <div className="flex flex-col sm:flex-row items-center justify-center relative z-10 max-w-5xl w-full gap-10">
+        {/* Profile Image on the left */}
+        <div className="flex-shrink-0 mb-8 sm:mb-0">
+          <img
+            src={profilePic}
+            alt="Kalani Jayasundara profile"
+            className="w-40 h-40 sm:w-56 sm:h-56 rounded-full object-cover shadow-lg border-4 border-purple-500 bg-gray-900 hover:scale-105 transition-transform duration-300"
+            style={{ boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)' }}
+          />
+        </div>
+        {/* Text Content */}
+        <div className="text-center sm:text-left flex-1">
       <h1 className="text-5xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight flex flex-col sm:flex-row sm:flex-wrap items-center sm:gap-2">
   <span>Hi, I'm</span>
   <span className="ml-3 bg-gradient-to-br from-purple-600 to-blue-600 text-transparent bg-clip-text">
@@ -147,6 +161,7 @@ const Hero = () => {
             </svg>
             <span>Download CV</span>
           </a>
+        </div>
         </div>
       </div>
     </section>

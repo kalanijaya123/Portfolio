@@ -9,6 +9,7 @@ import Contact from './Components/Contact';
 import Footer from './Components/Footer';
 import Chatbot from './Components/Chatbot';
 import Education from './Components/Education';
+import Sampels from './Components/Sampels';
 import GalaxyBackground from "./Components/GalaxyBackground";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Education />
         <BeyondWorks />
         <Contact /> 
+        <Sampels/>
       </div>
       <Footer />
     </div>
