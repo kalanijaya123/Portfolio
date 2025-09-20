@@ -18,10 +18,10 @@ export const ContactUs = () => {
 
     emailjs
       .sendForm(
-        'service_xa0drtt', 
-        'template_ehhmb7m', 
+        'service_i22rob3', 
+        'template_ar5xivj', 
         form.current, 
-        { publicKey: '3sbGL_jTTQYd-B7_F' }
+        { publicKey: 'WXC3xBDi7RYZEpm2d' }
       )
       .then(
         () => {

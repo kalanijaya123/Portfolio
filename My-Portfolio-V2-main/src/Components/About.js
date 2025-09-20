@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import image1 from "../Assets/image2.jpg";
-import image2 from "../Assets/image3.jpg";
+import image1 from "../Assets/img1.jpeg";
+import image2 from "../Assets/img3.jpg";
 
 const About = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
