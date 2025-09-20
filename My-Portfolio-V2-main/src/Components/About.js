@@ -97,8 +97,7 @@ const About = () => {
                           "Tailwind CSS",
                           "Javascript",
                           "Next Js",
-                          "Material UI",
-                          "Bootstrap",
+                          
                         ].map((skill) => (
                           <div
                             key={skill}
@@ -212,7 +211,7 @@ const About = () => {
               <h2 className="text-3xl font-bold text-left mt-60 ml-0 md:ml-5">
              I believe in understanding<br />
 challenges, then building<br />
-solutions with impact
+solutions with impact.
               </h2>
             </div>
           </motion.div>
@@ -242,7 +241,7 @@ solutions with impact
               <h2 className="text-3xl font-bold text-left mt-60 ml-0 md:ml-5">
              Always tackling<br />
 complex problems<br />
-with innovative code
+with innovative code.
               </h2>
             </div>
           </motion.div>

@@ -86,14 +86,7 @@ const Hero = () => {
 
 </div>
 
-{/* Bottom Icons for Mobile (hidden on sm and up) */}
-<div className="flex sm:hidden absolute bottom-6 left-1/2 transform -translate-x-1/2 space-x-6 z-10 pb-8">
-{socialLinks.map(({ icon: Icon, url }, index) => (
-  <a key={index} href={url} target="_blank" rel="noopener noreferrer">
-    <Icon size={24} className="text-white hover:text-blue-500" />
-  </a>
-))}
-</div>
+
 
 
       {/* Main Content with Profile Image */}
@@ -106,6 +99,15 @@ const Hero = () => {
             className="w-40 h-40 sm:w-56 sm:h-56 rounded-full object-cover shadow-lg border-4 border-purple-500 bg-gray-900 hover:scale-105 transition-transform duration-300"
             style={{ boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)' }}
           />
+        </div>
+
+        {/* Mobile Social Icons under buttons */}
+        <div className="flex sm:hidden justify-center space-x-6 mt-6">
+          {socialLinks.map(({ icon: Icon, url }, index) => (
+            <a key={index} href={url} target="_blank" rel="noopener noreferrer">
+              <Icon size={24} className="text-white hover:text-blue-500" />
+            </a>
+          ))}
         </div>
         {/* Text Content */}
         <div className="text-center sm:text-left flex-1">
