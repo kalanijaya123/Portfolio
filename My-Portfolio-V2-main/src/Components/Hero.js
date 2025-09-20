@@ -139,7 +139,7 @@ const Hero = () => {
         </h2>
 
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
+        <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start gap-4 mt-10">
           <a
             href="#contact"
             className="bg-transparent hover:bg-gradient-to-br from-purple-600 to-blue-600 text-white font-semibold hover:text-white py-3 px-11 border border-white hover:border-transparent rounded-full transition duration-300"
@@ -148,7 +148,7 @@ const Hero = () => {
           </a>
 
           <a
-            href={CV} // <-- Set this to your actual resume path
+            href={CV}
             download
             className="bg-gradient-to-br from-purple-600 to-blue-600 hover:bg-transparent text-white font-bold py-3 px-7 rounded-full border border-blue-800 hover:border-white flex items-center gap-2 transition duration-300"
           >
