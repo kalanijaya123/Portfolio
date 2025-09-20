@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import LOGO from '../Assets/my_logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,17 +36,12 @@ const Navbar = () => {
       } `}
     >
       <div className="max-w-6xl mx-auto flex justify-between items-center">
-        {/* Desktop → Name | Mobile → Logo */}
+        {/* Desktop and Mobile → Name only */}
         <a href="#home">
-          <h1 className="hidden md:block text-2xl font-bold">
+          <h1 className="text-2xl font-bold">
             <span className="text-purple-600">K</span>alani{" "}
             <span className="text-purple-600">J</span>ayasundara
           </h1>
-          <img
-            src={LOGO}
-            alt="Logo"
-            className="block md:hidden h-10 w-auto cursor-pointer"
-          />
         </a>
 
         {/* Desktop Menu */}
