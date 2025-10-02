@@ -33,7 +33,7 @@ const projectCards = [
     technologies: [FaReact, SiDotnet, SiPostgresql, SiTailwindcss],
     githubFrontend: "https://github.com/sandaru921/EVEROLA-react-frondend", // Replace with actual frontend repo link
     githubBackend: "https://github.com/sandaru921/EVELORA",
-    linkedin: "https://www.linkedin.com/posts/your-link",
+    linkedin: "https://www.linkedin.com/posts/kalani-jayasundara_softwaredevelopment-reactjs-aspnetcore-activity-7377524970890981376-4G-g?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAERYRmAB9d7ECCJNz9GafWwqQee9cdmcwlE",
   },
   {
     id: 3,
@@ -43,6 +43,7 @@ const projectCards = [
     images: [DIS],
   technologies: [FaReact, SiLaravel, SiMysql],
     github: ": https://github.com/kalanijaya123/Eventdiscovery-platform.git",
+    linkedin: "https://www.linkedin.com/posts/kalani-jayasundara_excited-to-share-that-ive-successfully-completed-activity-7378067685429071872-uYY0?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAERYRmAB9d7ECCJNz9GafWwqQee9cdmcwlE"
      },
  
 ];

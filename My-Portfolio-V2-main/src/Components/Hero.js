@@ -54,7 +54,7 @@ export default Hero;
 
 import React from "react";
 import GalaxyBackground from "./GalaxyBackground";
-import CV from '../Assets/CV.pdf';
+import CV from '../Assets/Kalani_Jayasundara_Intern_SoftwareEngineer_CV.pdf';
 import profilePic from '../Assets/PP.png';
 import { TypeAnimation } from 'react-type-animation';
 import { Typewriter } from 'react-simple-typewriter';
